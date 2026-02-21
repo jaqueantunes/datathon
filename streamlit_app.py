@@ -21,7 +21,16 @@ if st.button("Prever"):
     
     st.subheader(f"Probabilidade de Risco: {prob:.2%}")
     
-    if prob > 0.5:
-        st.error("⚠️ Alto risco de defasagem.")
+    if prob > 0.7:
+        st.error("⚠️ RISCO ALTO: intervenção imediata recomendada.")
+    elif prob > 0.4:
+        st.warning("🟡 Risco moderado: monitoramento recomendado.")
     else:
-        st.success("✅ Baixo risco.")
+        st.success("🟢 Baixo risco.")
+    
+    # 👇 AQUI ENTRA
+    st.markdown("---")
+    st.markdown("### 🔎 Principais Fatores de Risco segundo o Modelo")
+    st.write("• IDA (Desempenho Acadêmico)")
+    st.write("• IEG (Engajamento)")
+    st.write("• IAA (Autoavaliação)")

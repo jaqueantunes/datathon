@@ -98,16 +98,8 @@ A solução foi disponibilizada em uma aplicação desenvolvida com Streamlit.
 
 ---
 
-##  Estrutura do Projeto
 
----
 
-## Equipe
-
-- João – Análise Exploratória (EDA)
-- Vicente – Storytelling & Apresentação
-- Willian – Modelagem Preditiva
-- Jaque – Deploy & Aplicação Streamlit
 
 ---
 

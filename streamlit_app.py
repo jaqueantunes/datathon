@@ -49,7 +49,7 @@ if st.button("Prever"):
 
     # 🎨 Gráfico colorido
     fig, ax = plt.subplots()
-    cores = ['#d62728', '#ff7f0e', '#1f77b4', '#2ca02c', '#9467bd']
+    cores = ['#800000', '#000000', '#808080', '#6E0000', '#7A1E1E']
     ax.bar(df_importancia['Indicador'], df_importancia['Importância'], color=cores)
     ax.set_ylabel("Importância")
     ax.set_title("Ranking de Impacto no Risco")
@@ -84,3 +84,4 @@ if st.button("Prever"):
     else:
 
         st.success("Os indicadores mostram um perfil educacional consistente.")
+

@@ -9,7 +9,7 @@ modelo = joblib.load("modelo_risco.pkl")
 
 st.set_page_config(page_title="Risco de Defasagem", layout="centered")
 
-st.title("🎓 Previsão de Risco de Defasagem")
+st.title(" Previsão de Risco de Defasagem")
 st.markdown("Modelo preditivo baseado nos indicadores educacionais da Passos Mágicos.")
 
 # Inputs
@@ -36,8 +36,8 @@ if st.button("Prever"):
     
     st.markdown("---")
     
-    # 📊 IMPORTÂNCIA DAS VARIÁVEIS
-    st.markdown("## 📊 O que mais influencia o risco?")
+    # IMPORTÂNCIA DAS VARIÁVEIS
+    st.markdown("## O que mais influencia o risco?")
     
     features = ['IDA', 'IEG', 'IAA', 'IPS', 'IPV']
     importancias = modelo.feature_importances_
@@ -56,14 +56,14 @@ if st.button("Prever"):
     st.pyplot(fig)
 
     # 🏆 Ranking dinâmico
-    st.markdown("### 🏆 Ranking das Variáveis")
+    st.markdown("### Ranking das Variáveis")
     for i, row in df_importancia.iterrows():
         st.write(f"{row['Indicador']} → {row['Importância']:.2%}")
 
     st.markdown("---")
 
     # 🧠 Explicação automática baseada no input
-    st.markdown("## 🧠 Interpretação Inteligente")
+    st.markdown("##  Interpretação Final")
 
     explicacao = []
 
@@ -82,4 +82,5 @@ if st.button("Prever"):
         for item in explicacao:
             st.write(item)
     else:
+
         st.success("Os indicadores mostram um perfil educacional consistente.")
